@@ -1,7 +1,9 @@
-<html><head>
+<!DOCTYPE html>
+<html>
+  <head>
     <meta charset="utf-8">
     <title>Topup error</title>
-    <script>      
+    <script>
       if (typeof sbapp !== 'undefined') {
         sbapp.onTopUpError(500, "INTERNAL_SERVER_ERROR", "INTERNAL_SERVER_ERROR", "Something went wrong. Please try again, or contact our support team for assistance.");
       } else if (window.webkit.messageHandlers.onTopUpError) {
@@ -11,8 +13,9 @@
           "name": "INTERNAL_SERVER_ERROR",
           "message": "Something went wrong. Please try again, or contact our support team for assistance.",
         });
-      }</script>
+      }
+    </script>
   <meta name="viewport" content="width=device-width, maximum-scale=1"><style>#tblFrame { max-width: 100%; }</style></head>
   <body><div style="text-align: center"><h1>TopUp ... Error!</h1></div>
-
-</body></html>
+  </body>
+</html>
