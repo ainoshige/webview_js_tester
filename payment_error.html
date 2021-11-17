@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ShopBack Payment Confirmation</title>
+    <script>
+      if (typeof sbapp !== 'undefined') {
+        sbapp.onPaymentError(400, "use-original", "PaymentsError", "Something went wrong! Please try again in a few minutes.", "ddd282b5-110a-4471-b3fa-ec47f03ac5b9");
+      } else if (window.webkit.messageHandlers.onPaymentError) {
+        window.webkit.messageHandlers.onPaymentError.postMessage({
+          "statusCode": 400,
+          "code": "use-original",
+          "name": "PaymentsError",
+          "title": "Payment Error",
+          "message": "Something went wrong! Please try again in a few minutes.",
+          "reqId": "ddd282b5-110a-4471-b3fa-ec47f03ac5b9",
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <div style="text-align: center">
+      <h1>Processing your payment ...</h1>
+    </div>
+  </body>
+</html>
