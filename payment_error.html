@@ -5,7 +5,7 @@
     <title>ShopBack Payment Confirmation</title>
     <script>
       if (typeof sbapp !== 'undefined') {
-        sbapp.onPaymentError(400, "use-original", "PaymentsError", "Something went wrong! Please try again in a few minutes.", "ddd282b5-110a-4471-b3fa-ec47f03ac5b9");
+        sbapp.onPaymentError(400, "use-original", "PaymentsError", "Something went wrong! Please try again in a few minutes.", "ddd282b5-110a-4471-b3fa-ec47f03ac5b9", "Sample Title");
       } else if (window.webkit.messageHandlers.onPaymentError) {
         window.webkit.messageHandlers.onPaymentError.postMessage({
           "statusCode": 400,
